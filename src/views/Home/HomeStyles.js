@@ -5,6 +5,7 @@ export default HomeStyles = StyleSheet.create({
   container: {
     flex: 1,
     alignItems: "center",
+    backgroundColor: helpers.bgColor,
   },
   top_container_block: {
     marginTop: helpers.mTop,

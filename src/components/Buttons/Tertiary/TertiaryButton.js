@@ -1,5 +1,5 @@
 import React from "react";
-import { Button, Text, TouchableOpacity, View } from "react-native";
+import { Text, TouchableOpacity, View } from "react-native";
 import { StyleSheet } from "react-native";
 import * as variables from "../../../variables";
 
@@ -12,12 +12,16 @@ const useStyles = StyleSheet.create({
   },
 });
 
-export default function TertiaryButton({ label }) {
+export default function TertiaryButton({ customStyle, label, onPress }) {
   const classes = useStyles;
   return (
-    <TouchableOpacity>
+    <TouchableOpacity onPress={onPress}>
       <View>
-        <Text style={classes.tertiary_button_label}>{label}</Text>
+        <Text
+          style={[classes.tertiary_button_label, customStyle && customStyle]}
+        >
+          {label}
+        </Text>
       </View>
     </TouchableOpacity>
   );

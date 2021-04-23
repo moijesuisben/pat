@@ -16,7 +16,7 @@ const useStyles = StyleSheet.create({
     flexDirection: "row",
     alignItems: "center",
     marginBottom: helpers.m2,
-    borderRadius: 15,
+    borderRadius: helpers.borderRadius,
     paddingVertical: helpers.m1,
     paddingHorizontal: helpers.m3,
     backgroundColor: variables.athensGray,
@@ -31,11 +31,11 @@ const useStyles = StyleSheet.create({
   },
 });
 
-export default function Menu() {
+export default function Menu({ onPress }) {
   const classes = useStyles;
 
   return (
-    <TouchableOpacity style={classes.menu_container}>
+    <TouchableOpacity style={classes.menu_container} onPress={onPress}>
       <View style={classes.menu_button}>
         <Text style={classes.menu_button_text}>Menu</Text>
         <MenuIcon />

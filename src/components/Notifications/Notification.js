@@ -11,7 +11,7 @@ const useStyles = StyleSheet.create({
     width: "100%",
     minHeight: 10,
     backgroundColor: variables.athensGray,
-    borderRadius: 15,
+    borderRadius: helpers.borderRadius,
     paddingHorizontal: helpers.m2,
     paddingTop: helpers.m3,
     paddingBottom: helpers.m2,

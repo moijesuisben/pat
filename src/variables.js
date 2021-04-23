@@ -19,3 +19,4 @@ export const trout = "#495057";
 export const athensGray = "#F8F9FA";
 export const osloGray = "#868E96";
 export const silverSand = "#C8CACC";
+export const white = "#FFFFFF";
