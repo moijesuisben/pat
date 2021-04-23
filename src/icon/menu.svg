@@ -1,0 +1,14 @@
+<svg id="Icon_Menu" data-name="Icon &gt; Menu" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="10" height="10" viewBox="0 0 10 10">
+  <defs>
+    <clipPath id="clip-path">
+      <rect id="Rectangle_107" data-name="Rectangle 107" width="10" height="10" fill="#495057"/>
+    </clipPath>
+  </defs>
+  <g id="Groupe_de_masques_3" data-name="Groupe de masques 3" clip-path="url(#clip-path)">
+    <g id="__TEMP__SVG__" transform="translate(0 0.455)">
+      <path id="Tracé_28" data-name="Tracé 28" d="M6.818,8.182h10v.909h-10Z" transform="translate(-6.818 -8.182)" fill="#495057"/>
+      <path id="Tracé_29" data-name="Tracé 29" d="M6.818,20.455h10v.909h-10Z" transform="translate(-6.818 -16.364)" fill="#495057"/>
+      <path id="Tracé_30" data-name="Tracé 30" d="M6.818,32.727h10v.909h-10Z" transform="translate(-6.818 -24.545)" fill="#495057"/>
+    </g>
+  </g>
+</svg>
