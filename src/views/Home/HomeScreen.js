@@ -9,10 +9,10 @@ import {
   Nunito_800ExtraBold,
 } from "@expo-google-fonts/nunito";
 import HomeStyles from "./HomeStyles";
-import { ScrollView, View } from "react-native";
+import { View } from "react-native";
 import Title from "../../components/Text/Title";
 import Avatar from "../../components/Avatar/Avatar";
-import AvatarMedia from "../../icon/Avatar.png";
+import AvatarMedia from "../../media/Avatar.png";
 import TertiaryButton from "../../components/Buttons/Tertiary/TertiaryButton";
 import SubTitle from "../../components/Text/SubTitle";
 import Notification from "../../components/Notifications/Notification";

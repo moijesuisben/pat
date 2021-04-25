@@ -1,5 +1,5 @@
 import React from "react";
-import { Button, Text, TouchableOpacity, View } from "react-native";
+import { Text, TouchableOpacity } from "react-native";
 import { StyleSheet } from "react-native";
 import * as variables from "../../../variables";
 import * as helpers from "../../../helpers";
@@ -25,9 +25,6 @@ export default function SOSButton() {
   const classes = useStyles;
   return (
     <TouchableOpacity>
-      {/* <View style={classes.sos_button_container}>
-        <Text style={classes.sos_button_label}>SOS</Text>
-      </View> */}
       <SOSBlock classes={classes.sos_button_container} />
       <Text style={classes.sos_button_label}>SOS</Text>
     </TouchableOpacity>

@@ -12,14 +12,14 @@ function App() {
   return (
     <NavigationContainer>
       <Stack.Navigator initialRouteName="Title">
-        {/* <Stack.Screen
+        <Stack.Screen
           name="Home"
           component={HomeScreen}
           options={{
             headerTransparent: true,
             headerTitle: () => <Logo />,
           }}
-        /> */}
+        />
         <Stack.Screen
           name="Contact"
           component={ContactScreen}

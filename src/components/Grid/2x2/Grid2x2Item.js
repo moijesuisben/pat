@@ -9,7 +9,7 @@ const useStyles = StyleSheet.create({
   grid_item_2x2_container: {
     height: 120,
     width: '48%',
-    justifyContent: "center",
+    justifyContent: "space-between",
     alignItems: "center",
     paddingTop: helpers.m3,
     paddingBottom: helpers.m2,

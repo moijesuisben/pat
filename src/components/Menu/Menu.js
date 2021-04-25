@@ -6,8 +6,6 @@ import MenuIcon from "../../icon/menu.svg";
 
 const useStyles = StyleSheet.create({
   menu_container: {
-    // borderColor: "red",
-    // borderWidth: 1,
     display: "flex",
     alignItems: "center",
   },

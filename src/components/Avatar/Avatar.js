@@ -4,8 +4,6 @@ import { StyleSheet } from "react-native";
 
 const useStyles = StyleSheet.create({
   avatar_container: {
-    /* height: 174,
-    width: 174, */
     borderRadius: 100,
   },
 });
