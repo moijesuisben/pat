@@ -1,7 +1,7 @@
 import React from "react";
 import { View, Text, TouchableOpacity, StyleSheet } from "react-native";
-import * as variables from "../../variables";
 import * as helpers from "../../helpers";
+import * as variables from "../../variables";
 import MenuIcon from "../../icon/menu.svg";
 
 const useStyles = StyleSheet.create({
@@ -19,7 +19,7 @@ const useStyles = StyleSheet.create({
     borderRadius: helpers.borderRadius,
     paddingVertical: helpers.m1,
     paddingHorizontal: helpers.m3,
-    backgroundColor: variables.athensGray,
+    backgroundColor: helpers.blockColor,
     shadowColor: helpers.shadowColor,
     shadowRadius: 6,
     shadowOpacity: 0.16,

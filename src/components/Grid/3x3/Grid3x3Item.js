@@ -1,11 +1,11 @@
 import React from "react";
 import { Text, TouchableOpacity, View, StyleSheet } from "react-native";
-import * as helpers from "../../helpers";
-import * as variables from "../../variables";
-import TestIcon from "../../icon/close.svg";
+import * as helpers from "../../../helpers";
+import * as variables from "../../../variables";
+import TestIcon from "../../../icon/close.svg";
 
 const useStyles = StyleSheet.create({
-  gridItem_container: {
+  grid_item_3x3_container: {
     borderWidth: 2,
     width: 100,
     height: 100,
@@ -15,17 +15,17 @@ const useStyles = StyleSheet.create({
     borderWidth: 2,
     borderRadius: helpers.borderRadius,
   },
-  gridItem_containerWithBorder: {
+  grid_item_3x3_containerWithBorder: {
     borderColor: helpers.primaryColor,
   },
-  gridItem_containerWithIcon: {
+  grid_item_3x3_containerWithIcon: {
     justifyContent: "space-between",
   },
-  gridItem_icon: {
+  grid_item_3x3_icon: {
     marginTop: helpers.m8,
     alignItems: "center",
   },
-  gridItem_label: {
+  grid_item_3x3_label: {
     marginBottom: helpers.m3,
     textAlign: "center",
     fontFamily: variables.ff_light,
@@ -33,7 +33,8 @@ const useStyles = StyleSheet.create({
   },
 });
 
-export default function GridItem({
+export default function Grid3x3Item({
+  onPress,
   media = <TestIcon height="20" width="20" />,
   label,
   border,
@@ -41,16 +42,16 @@ export default function GridItem({
   const classes = useStyles;
 
   return (
-    <TouchableOpacity>
+    <TouchableOpacity onPress={onPress}>
       <View
         style={[
-          classes.gridItem_container,
-          media && classes.gridItem_containerWithIcon,
-          border && classes.gridItem_containerWithBorder,
+          classes.grid_item_3x3_container,
+          media && classes.grid_item_3x3_containerWithIcon,
+          border && classes.grid_item_3x3_containerWithBorder,
         ]}
       >
-        {media && <View style={classes.gridItem_icon}>{media}</View>}
-        <Text style={classes.gridItem_label}>{label}</Text>
+        {media && <View style={classes.grid_item_3x3_icon}>{media}</View>}
+        <Text style={classes.grid_item_3x3_label}>{label}</Text>
       </View>
     </TouchableOpacity>
   );

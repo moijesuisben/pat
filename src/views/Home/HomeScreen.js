@@ -20,6 +20,7 @@ import Footer from "../../components/Footer/Footer";
 
 export default function HomeScreen({ navigation }) {
   const classes = HomeStyles;
+  const [notification, setNotification] = React.useState(true);
   let [fontsLoaded] = useFonts({
     Nunito_300Light,
     Nunito_400Regular,
@@ -28,6 +29,10 @@ export default function HomeScreen({ navigation }) {
     Nunito_800ExtraBold,
   });
 
+  const closeNotification = () => {
+    setNotification(false);
+  };
+
   if (!fontsLoaded) {
     return <AppLoading />;
   } else {
@@ -35,7 +40,7 @@ export default function HomeScreen({ navigation }) {
       <View style={{ flex: 1 }}>
         <View style={classes.container}>
           <View style={classes.top_container_block}>
-            <Avatar media={AvatarMedia} />
+            <Avatar media={AvatarMedia} size={174} />
             <View style={classes.top_container_title}>
               <Title content="Benjamin" />
             </View>
@@ -43,16 +48,22 @@ export default function HomeScreen({ navigation }) {
           </View>
           <View style={classes.content_container_block}>
             <SubTitle content="mes dernières notifications" />
-            <Notification
-              message="Lu vous a envoyé un message"
-              date="il y a 2 jours"
-            />
-            <Notification
-              message="Lu a ouvert votre message"
-              date="il y a 3 jours"
-            />
+            {/* // TODO Make an array with map */}
+            {notification && (
+              <Notification
+                message="Lu vous a envoyé un message"
+                date="il y a 2 jours"
+                // onPress={closeNotification}
+              />
+            )}
+            {notification && (
+              <Notification
+                message="Lu a ouvert votre message"
+                date="il y a 3 jours"
+              />
+            )}
           </View>
-          <Footer />
+          <Footer navigation={navigation} />
         </View>
       </View>
     );

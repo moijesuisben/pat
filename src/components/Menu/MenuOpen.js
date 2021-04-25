@@ -1,13 +1,12 @@
 import React from "react";
-import { Text, View, StyleSheet } from "react-native";
-import GridLine from "../Grid/GridLine";
+import { View, StyleSheet } from "react-native";
+import Grid3x3Line from "../Grid/3x3/Grid3x3Line";
 import * as helpers from "../../helpers";
-import * as variables from "../../variables";
 import TertiaryButton from "../Buttons/Tertiary/TertiaryButton";
 
 const useStyles = StyleSheet.create({
   menu_open_container: {
-    backgroundColor: variables.athensGray,
+    backgroundColor: helpers.blockColor,
     borderRadius: helpers.borderRadius,
     shadowColor: helpers.shadowColor,
     shadowRadius: 6,
@@ -23,19 +22,20 @@ const useStyles = StyleSheet.create({
   },
 });
 
-export default function MenuOpen({ onPress }) {
+export default function MenuOpen({ onPress, navigation }) {
   const classes = useStyles;
 
   return (
     <View style={classes.menu_open_container}>
       <View style={classes.menu_open_grid}>
-        <GridLine
+        <Grid3x3Line
           border
           labelLeft="écire un message"
           labelMiddle="mes conversations"
           labelRight="Mes contacts"
+          onPressLeft={() => navigation.navigate("Contact")}
         />
-        <GridLine
+        <Grid3x3Line
           border
           labelLeft="Mes invitations"
           labelMiddle="Mon espace"

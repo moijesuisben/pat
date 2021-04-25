@@ -1,16 +1,15 @@
 import React from "react";
-import { Image, Text, View } from "react-native";
+import { Text, TouchableOpacity, View } from "react-native";
 import { StyleSheet } from "react-native";
 import * as variables from "../../variables";
 import * as helpers from "../../helpers";
 import CloseIcon from "../../icon/close.svg";
-import { SvgUri } from "react-native-svg";
 
 const useStyles = StyleSheet.create({
   notification_container: {
     width: "100%",
     minHeight: 10,
-    backgroundColor: variables.athensGray,
+    backgroundColor: helpers.blockColor,
     borderRadius: helpers.borderRadius,
     paddingHorizontal: helpers.m2,
     paddingTop: helpers.m3,
@@ -35,7 +34,7 @@ const useStyles = StyleSheet.create({
   },
 });
 
-export default function Notification({ message, date }) {
+export default function Notification({ message, date, onPress }) {
   const classes = useStyles;
   return (
     <View style={classes.notification_container}>
@@ -43,7 +42,9 @@ export default function Notification({ message, date }) {
         <Text style={classes.notification_message}>{message}</Text>
         <Text style={classes.notification_date}>{date}</Text>
       </View>
-      <CloseIcon height={14} width={14} />
+      <TouchableOpacity onPress={onPress}>
+        <CloseIcon height={14} width={14} />
+      </TouchableOpacity>
     </View>
   );
 }

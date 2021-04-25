@@ -3,6 +3,7 @@ import * as variables from "./variables";
 // COLORS
 export const primaryColor = variables.blue;
 export const secondaryColor = variables.pinkLace;
+export const blockColor = variables.athensGray;
 export const textColor = variables.trout;
 export const shadowColor = variables.trout;
 export const bgColor = variables.white;

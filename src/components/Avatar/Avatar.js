@@ -4,13 +4,13 @@ import { StyleSheet } from "react-native";
 
 const useStyles = StyleSheet.create({
   avatar_container: {
-    height: 174,
-    width: 174,
+    /* height: 174,
+    width: 174, */
     borderRadius: 100,
   },
 });
 
-export default function Avatar({media}) {
+export default function Avatar({media, size}) {
   const classes = useStyles;
-  return <Image style={classes.avatar_container} source={media}></Image>;
+  return <Image style={classes.avatar_container, {height: size, width: size}} source={media}></Image>;
 }

@@ -12,7 +12,7 @@ const useStyles = StyleSheet.create({
   },
 });
 
-export default function Footer() {
+export default function Footer({navigation}) {
   const classes = useStyles;
   const [open, setOpen] = React.useState(false);
 
@@ -32,7 +32,7 @@ export default function Footer() {
           <SOSButton />
         </>
       ) : (
-        <MenuOpen onPress={closeMenu} />
+        <MenuOpen onPress={closeMenu} navigation={navigation} />
       )}
     </View>
   );

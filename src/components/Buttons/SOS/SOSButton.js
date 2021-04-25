@@ -17,7 +17,7 @@ const useStyles = StyleSheet.create({
     marginTop: helpers.m1,
     fontFamily: variables.ff_bold,
     fontSize: variables.fs_medium,
-    color: variables.athensGray,
+    color: helpers.blockColor,
   },
 });
 
