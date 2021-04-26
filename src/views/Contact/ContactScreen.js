@@ -16,7 +16,11 @@ import Footer from "../../components/Footer/Footer";
 import Searchbar from "../../components/SearchBar/Searchbar";
 import Grid2x2Line from "../../components/Grid/2x2/Grid2x2Line";
 
-export default function ContactScreen({ navigation }) {
+export default function ContactScreen({
+  navigation,
+  onPressLeft,
+  onPressRight,
+}) {
   const classes = ContactStyles;
   let [fontsLoaded] = useFonts({
     Nunito_300Light,
@@ -38,14 +42,29 @@ export default function ContactScreen({ navigation }) {
             </View>
             <Searchbar />
           </View>
-          <ScrollView style={{ width: "80%" }} showsVerticalScrollIndicator={false}>
+          <ScrollView
+            style={{ width: "80%" }}
+            showsVerticalScrollIndicator={false}
+          >
             <View style={classes.content_container_block}>
               <SubTitle content="contacts récents" />
-              <Grid2x2Line />
-              <Grid2x2Line />
+              <Grid2x2Line
+                onPressLeft={onPressLeft}
+                onPressRight={onPressRight}
+              />
+              <Grid2x2Line
+                onPressLeft={onPressLeft}
+                onPressRight={onPressRight}
+              />
               <SubTitle content="tous mes contacts" />
-              <Grid2x2Line />
-              <Grid2x2Line />
+              <Grid2x2Line
+                onPressLeft={onPressLeft}
+                onPressRight={onPressRight}
+              />
+              <Grid2x2Line
+                onPressLeft={onPressLeft}
+                onPressRight={onPressRight}
+              />
             </View>
           </ScrollView>
           <Footer navigation={navigation} />
