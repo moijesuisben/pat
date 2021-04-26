@@ -7,7 +7,7 @@ const useStyles = StyleSheet.create({
   grid_line_2x2_container: {
     flexDirection: "row",
     justifyContent: "space-between",
-    width: "100%",
+    width: "125%",
     marginBottom: helpers.m2,
   },
 });

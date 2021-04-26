@@ -21,5 +21,6 @@ export default ContactStyles = StyleSheet.create({
     marginTop: helpers.m2,
     alignItems: "baseline",
     width: helpers.s_80,
+    marginBottom: helpers.m16,
   },
 });

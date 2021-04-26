@@ -9,7 +9,7 @@ import {
   Nunito_800ExtraBold,
 } from "@expo-google-fonts/nunito";
 import ContactStyles from "./ContactStyles";
-import { View } from "react-native";
+import { View, ScrollView } from "react-native";
 import Title from "../../components/Text/Title";
 import SubTitle from "../../components/Text/SubTitle";
 import Footer from "../../components/Footer/Footer";
@@ -38,11 +38,16 @@ export default function ContactScreen({ navigation }) {
             </View>
             <Searchbar />
           </View>
-          <View style={classes.content_container_block}>
-            <SubTitle content="contacts récents" />
-            <Grid2x2Line />
-            <Grid2x2Line />
-          </View>
+          <ScrollView style={{ width: "80%" }} showsVerticalScrollIndicator={false}>
+            <View style={classes.content_container_block}>
+              <SubTitle content="contacts récents" />
+              <Grid2x2Line />
+              <Grid2x2Line />
+              <SubTitle content="tous mes contacts" />
+              <Grid2x2Line />
+              <Grid2x2Line />
+            </View>
+          </ScrollView>
           <Footer navigation={navigation} />
         </View>
       </View>

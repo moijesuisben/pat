@@ -20,6 +20,12 @@ export const m7 = "17%";
 export const m8 = "20%";
 export const m9 = "22%";
 export const m10 = "25%";
+export const m11 = "27%";
+export const m12 = "30%";
+export const m13 = "32%";
+export const m14 = "35%";
+export const m15 = "37%";
+export const m16 = "40%";
 
 // SIZING
 export const s_80 = "80%";
