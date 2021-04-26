@@ -1,5 +1,5 @@
 import React from "react";
-import { Text, TouchableOpacity, View } from "react-native";
+import { TextInput, TouchableOpacity, View } from "react-native";
 import { StyleSheet } from "react-native";
 import * as variables from "../../variables";
 import * as helpers from "../../helpers";
@@ -32,13 +32,17 @@ const useStyles = StyleSheet.create({
 
 export default function Searchbar() {
   const classes = useStyles;
+  const [text, onChangeText] = React.useState(null);
   return (
     <View style={classes.searchbar_container}>
       <View style={classes.searchbar_content}>
         <SearchIcon />
-        <Text style={classes.searchbar_content_text}>
-          Je suis la barre de recherche
-        </Text>
+        <TextInput
+          style={classes.searchbar_content_text}
+          value={text}
+          onChangeText={onChangeText}
+          placeholder="Saissisez votre recherche"
+        ></TextInput>
       </View>
       <View style={classes.searchbar_erase}>
         <CloseIcon height="14" />
