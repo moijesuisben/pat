@@ -34,7 +34,12 @@ const useStyles = StyleSheet.create({
   },
 });
 
-export default function Notification({ message, date, onPress }) {
+export default function Notification({
+  message,
+  date,
+  onPress,
+  icon = <CloseIcon height={14} width={14} />,
+}) {
   const classes = useStyles;
   return (
     <View style={classes.notification_container}>
@@ -42,9 +47,10 @@ export default function Notification({ message, date, onPress }) {
         <Text style={classes.notification_message}>{message}</Text>
         <Text style={classes.notification_date}>{date}</Text>
       </View>
-      <TouchableOpacity onPress={onPress}>
+      {/* <TouchableOpacity onPress={onPress}>
         <CloseIcon height={14} width={14} />
-      </TouchableOpacity>
+      </TouchableOpacity> */}
+      {icon && <TouchableOpacity onPress={onPress}>{icon}</TouchableOpacity>}
     </View>
   );
 }

@@ -42,14 +42,14 @@ export default function ContactScreen({
             </View>
             <Searchbar />
           </View>
-          <ScrollView
+          {/* <ScrollView
             style={{ width: "80%" }}
             showsVerticalScrollIndicator={false}
-          >
+          > */}
             <View style={classes.content_container_block}>
               <SubTitle content="contacts récents" />
               <Grid2x2Line
-                onPressLeft={onPressLeft}
+                onPressLeft={() => console.log("ici ça click")}
                 onPressRight={onPressRight}
               />
               <Grid2x2Line
@@ -66,7 +66,7 @@ export default function ContactScreen({
                 onPressRight={onPressRight}
               />
             </View>
-          </ScrollView>
+          {/* </ScrollView> */}
           <Footer navigation={navigation} />
         </View>
       </View>

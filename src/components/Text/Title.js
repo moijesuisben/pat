@@ -8,7 +8,7 @@ export default function Title({ content }) {
     <Text
       style={{
         fontFamily: variables.ff_bold,
-        fontSize: variables.fs_extra_large,
+        fontSize: variables.fs_giant,
         textAlign: "center",
         color: helpers.textColor,
       }}

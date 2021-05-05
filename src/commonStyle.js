@@ -4,7 +4,7 @@ import * as helpers from "./helpers";
 
 const commonStyle = StyleSheet.create({
   title: {
-    fontSize: variables.fs_extra_large,
+    fontSize: variables.fs_giant,
     fontWeight: variables.fw_bold,
   },
   container: {

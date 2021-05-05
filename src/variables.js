@@ -9,8 +9,9 @@ export const ff_extra_bold = "Nunito_800ExtraBold";
 export const fs_extra_small = 12;
 export const fs_small = 15;
 export const fs_medium = 20;
-export const fs_large = 30;
-export const fs_extra_large = 35;
+export const fs_large = 25;
+export const fs_extra_large = 30;
+export const fs_giant = 35;
 
 // COLORS
 export const blue = "#0121F7";
