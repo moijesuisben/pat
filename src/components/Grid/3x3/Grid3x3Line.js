@@ -20,18 +20,36 @@ export default function Grid3x3Line({
   onPressLeft,
   onPressMiddle,
   onPressRight,
+  bgColor,
+  mediaLeft,
+  mediaMiddle,
+  mediaRight,
 }) {
   const classes = useStyles;
 
   return (
     <View style={classes.grid_item_3x3_container}>
-      <Grid3x3Item border={border} label={labelLeft} onPress={onPressLeft} />
       <Grid3x3Item
+        bgColor={bgColor}
         border={border}
+        media={mediaLeft}
+        label={labelLeft}
+        onPress={onPressLeft}
+      />
+      <Grid3x3Item
+        bgColor={bgColor}
+        border={border}
+        media={mediaMiddle}
         label={labelMiddle}
         onPress={onPressMiddle}
       />
-      <Grid3x3Item border={border} label={labelRight} onPress={onPressRight} />
+      <Grid3x3Item
+        bgColor={bgColor}
+        border={border}
+        media={mediaRight}
+        label={labelRight}
+        onPress={onPressRight}
+      />
     </View>
   );
 }

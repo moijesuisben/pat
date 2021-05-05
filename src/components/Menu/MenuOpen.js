@@ -3,6 +3,7 @@ import { View, StyleSheet } from "react-native";
 import Grid3x3Line from "../Grid/3x3/Grid3x3Line";
 import * as helpers from "../../helpers";
 import TertiaryButton from "../Buttons/Tertiary/TertiaryButton";
+import TestIcon from "../../icon/close.svg";
 
 const useStyles = StyleSheet.create({
   menu_open_container: {
@@ -27,16 +28,23 @@ export default function MenuOpen({ onPress, navigation }) {
 
   return (
     <View style={classes.menu_open_container}>
-      <View style={classes.menu_open_grid}>
+      <View>
         <Grid3x3Line
           border
+          mediaLeft={<TestIcon height="20" width="20" />}
+          mediaMiddle={<TestIcon height="20" width="20" />}
+          mediaRight={<TestIcon height="20" width="20" />}
           labelLeft="écire un message"
           labelMiddle="mes conversations"
           labelRight="Mes contacts"
-          onPressLeft={() => navigation.navigate("Contact")}
+          onPressLeft={() => navigation.navigate("ÉcrireUnMessage")}
+          onPressRight={() => navigation.navigate("Contact")}
         />
         <Grid3x3Line
           border
+          mediaLeft={<TestIcon height="20" width="20" />}
+          mediaMiddle={<TestIcon height="20" width="20" />}
+          mediaRight={<TestIcon height="20" width="20" />}
           labelLeft="Mes invitations"
           labelMiddle="Mon espace"
           labelRight="Mes paramètres"

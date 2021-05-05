@@ -5,6 +5,8 @@ import HomeScreen from "./src/views/Home/HomeScreen";
 import ContactScreen from "./src/views/Contact/ContactScreen";
 import Logo from "./src/components/Logo/Logo";
 import ContactProfileScreen from "./src/views/ContactProfile/ContactProfileScreen";
+import ChooseContactScreen from "./src/views/ChooseContact/ChooseContactScreen";
+import SelectMessageTypeScreen from "./src/views/SelectMessageType/SelectMessageTypeScreen";
 // import FakeScreen from "./src/views/Fake/Fake";
 
 const Stack = createStackNavigator();
@@ -13,7 +15,7 @@ function App() {
   return (
     <NavigationContainer>
       <Stack.Navigator initialRouteName="Title">
-       {/*  <Stack.Screen
+        <Stack.Screen
           name="Home"
           component={HomeScreen}
           options={{
@@ -28,10 +30,26 @@ function App() {
             headerTransparent: true,
             headerTitle: () => <Logo />,
           }}
-        /> */}
+        />
         <Stack.Screen
           name="ContactProfile"
           component={ContactProfileScreen}
+          options={{
+            headerTransparent: true,
+            headerTitle: () => <Logo />,
+          }}
+        />
+        <Stack.Screen
+          name="ÉcrireUnMessage"
+          component={ChooseContactScreen}
+          options={{
+            headerTransparent: true,
+            headerTitle: () => <Logo />,
+          }}
+        />
+        <Stack.Screen
+          name="SelectMessageType"
+          component={SelectMessageTypeScreen}
           options={{
             headerTransparent: true,
             headerTitle: () => <Logo />,

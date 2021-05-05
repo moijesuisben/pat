@@ -8,7 +8,7 @@ import {
   Nunito_700Bold,
   Nunito_800ExtraBold,
 } from "@expo-google-fonts/nunito";
-import ContactStyles from "./ContactStyles";
+import ChooseContactStyles from "./ChooseContactStyle";
 import { View, ScrollView } from "react-native";
 import Title from "../../components/Text/Title";
 import SubTitle from "../../components/Text/SubTitle";
@@ -16,12 +16,8 @@ import Footer from "../../components/Footer/Footer";
 import Searchbar from "../../components/SearchBar/Searchbar";
 import Grid2x2Line from "../../components/Grid/2x2/Grid2x2Line";
 
-export default function ContactScreen({
-  navigation,
-  onPressLeft,
-  onPressRight,
-}) {
-  const classes = ContactStyles;
+export default function ChooseContactScreen({ navigation }) {
+  const classes = ChooseContactStyles;
   let [fontsLoaded] = useFonts({
     Nunito_300Light,
     Nunito_400Regular,
@@ -38,7 +34,7 @@ export default function ContactScreen({
         <View style={classes.container}>
           <View style={classes.top_container_block}>
             <View style={classes.top_container_title}>
-              <Title content="Mes contacts" />
+              <Title content="Choisir un contact" />
             </View>
             <Searchbar />
           </View>
@@ -49,21 +45,21 @@ export default function ContactScreen({
             <View style={classes.content_container_block}>
               <SubTitle content="contacts récents" />
               <Grid2x2Line
-                onPressLeft={() => navigation.navigate("ContactProfile")}
-                onPressRight={() => navigation.navigate("ContactProfile")}
+                onPressLeft={() => navigation.navigate("SelectMessageType")}
+                onPressRight={() => navigation.navigate("SelectMessageType")}
               />
               <Grid2x2Line
-                onPressLeft={() => navigation.navigate("ContactProfile")}
-                onPressRight={() => navigation.navigate("ContactProfile")}
+                onPressLeft={() => navigation.navigate("SelectMessageType")}
+                onPressRight={() => navigation.navigate("SelectMessageType")}
               />
               <SubTitle content="tous mes contacts" />
               <Grid2x2Line
-                onPressLeft={() => navigation.navigate("ContactProfile")}
-                onPressRight={() => navigation.navigate("ContactProfile")}
+                onPressLeft={() => navigation.navigate("SelectMessageType")}
+                onPressRight={() => navigation.navigate("SelectMessageType")}
               />
               <Grid2x2Line
-                onPressLeft={() => navigation.navigate("ContactProfile")}
-                onPressRight={() => navigation.navigate("ContactProfile")}
+                onPressLeft={() => navigation.navigate("SelectMessageType")}
+                onPressRight={() => navigation.navigate("SelectMessageType")}
               />
             </View>
           </ScrollView>

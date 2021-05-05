@@ -6,20 +6,22 @@ import TestIcon from "../../../icon/close.svg";
 
 const useStyles = StyleSheet.create({
   grid_item_3x3_container: {
-    borderWidth: 2,
     width: 100,
     height: 100,
     flexDirection: "column",
     alignItems: "center",
     justifyContent: "flex-end",
-    borderWidth: 2,
     borderRadius: helpers.borderRadius,
   },
   grid_item_3x3_containerWithBorder: {
+    borderWidth: 2,
     borderColor: helpers.primaryColor,
   },
   grid_item_3x3_containerWithIcon: {
     justifyContent: "space-between",
+  },
+  grid_item_3x3_containerWithBgColor: {
+    backgroundColor: helpers.blockColor,
   },
   grid_item_3x3_icon: {
     marginTop: helpers.m8,
@@ -35,9 +37,10 @@ const useStyles = StyleSheet.create({
 
 export default function Grid3x3Item({
   onPress,
-  media = <TestIcon height="20" width="20" />,
+  media,
   label,
   border,
+  bgColor,
 }) {
   const classes = useStyles;
 
@@ -48,6 +51,7 @@ export default function Grid3x3Item({
           classes.grid_item_3x3_container,
           media && classes.grid_item_3x3_containerWithIcon,
           border && classes.grid_item_3x3_containerWithBorder,
+          bgColor && classes.grid_item_3x3_containerWithBgColor,
         ]}
       >
         {media && <View style={classes.grid_item_3x3_icon}>{media}</View>}
