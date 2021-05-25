@@ -9,17 +9,11 @@ import {
   Nunito_800ExtraBold,
 } from "@expo-google-fonts/nunito";
 import SelectMessageTypeStyles from "./SelectMessageTypeStyles";
-import * as helpers from "../../helpers";
 import { Text, View } from "react-native";
-// import SubTitle from "../../components/Text/SubTitle";
-import Footer from "../../components/Footer/Footer";
 import Avatar from "../../components/Avatar/Avatar";
 import AvatarMedia from "../../media/Avatar.png";
-import TertiaryButton from "../../components/Buttons/Tertiary/TertiaryButton";
-// import Notification from "../../components/Notifications/Notification";
-import PrimaryButton from "../../components/Buttons/Primary/PrimaryButton";
 import Grid3x3Line from "../../components/Grid/3x3/Grid3x3Line";
-// import LookIcon from "../../icon/look.svg";
+import Block from "../../components/Message/Block/Block";
 
 export default function SelectMessageTypeScreen({ navigation }) {
   const classes = SelectMessageTypeStyles;
@@ -41,13 +35,14 @@ export default function SelectMessageTypeScreen({ navigation }) {
             <Avatar media={AvatarMedia} size={100} />
             <Text style={classes.profil_name}>Alix</Text>
           </View>
-          <View style={classes.block_content} />
+          <Block height="35%" width="80%" />
           <View style={classes.message_type_block}>
             <Grid3x3Line
               bgColor
               labelLeft="Faire une pensée"
               labelMiddle="Faire une esquisse"
               labelRight="Faire une étincelle"
+              onPressLeft={() => navigation.navigate("MessageThought")}
             />
             <Grid3x3Line
               bgColor

@@ -1,8 +1,8 @@
 import { StyleSheet } from "react-native";
-import * as helpers from "../../helpers";
-import * as variables from "../../variables";
+import * as helpers from "../../../helpers";
+import * as variables from "../../../variables";
 
-export default SelectMessageTypeScreen = StyleSheet.create({
+export default ThoughtStyles = StyleSheet.create({
   container: {
     flex: 1,
     alignItems: "center",
@@ -16,8 +16,5 @@ export default SelectMessageTypeScreen = StyleSheet.create({
     fontFamily: variables.ff_light,
     fontSize: variables.fs_small,
     marginVertical: helpers.m1,
-  },
-  message_type_block: {
-    width: "80%",
   },
 });

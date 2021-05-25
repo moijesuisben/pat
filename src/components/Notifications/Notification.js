@@ -47,9 +47,6 @@ export default function Notification({
         <Text style={classes.notification_message}>{message}</Text>
         <Text style={classes.notification_date}>{date}</Text>
       </View>
-      {/* <TouchableOpacity onPress={onPress}>
-        <CloseIcon height={14} width={14} />
-      </TouchableOpacity> */}
       {icon && <TouchableOpacity onPress={onPress}>{icon}</TouchableOpacity>}
     </View>
   );
